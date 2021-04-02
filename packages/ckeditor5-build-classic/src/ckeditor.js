@@ -17,6 +17,7 @@ import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
@@ -46,6 +47,7 @@ ClassicEditor.builtinPlugins = [
 	Heading,
 	Image,
 	ImageCaption,
+	ImageResize,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
@@ -85,9 +87,45 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	image: {
+		resizeUnit: "%",
+		resizeOptions: [
+			{
+				name: 'resizeImage:original',
+				value: null,
+				icon: 'original'
+			},
+			{
+				name: 'resizeImage:25',
+				value: '25',
+				icon: 'small'
+			},
+			{
+				name: 'resizeImage:50',
+				value: '50',
+				icon: 'medium'
+			},
+			{
+				name: 'resizeImage:75',
+				value: '75',
+				icon: 'large'
+			}
+		],
+		styles:[
+			'full',
+			'alignLeft',
+			'alignCenter',
+			'alignRight'
+		],
 		toolbar: [
 			'imageStyle:full',
-			'imageStyle:side',
+			'imageStyle:alignLeft',
+			'imageStyle:alignCenter',
+			'imageStyle:alignRight',
+			'|',
+			'resizeImage:original',
+			'resizeImage:25',
+			'resizeImage:50',
+			'resizeImage:75',
 			'|',
 			'imageTextAlternative',
 			'|',
