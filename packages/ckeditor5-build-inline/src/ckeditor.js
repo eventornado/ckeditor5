@@ -30,6 +30,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -46,6 +47,7 @@ InlineEditor.builtinPlugins = [
 	Heading,
 	Image,
 	ImageCaption,
+	ImageResize,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
@@ -85,9 +87,28 @@ InlineEditor.defaultConfig = {
 		]
 	},
 	image: {
+		resizeUnit: "%",
+		resizeOptions: [
+			{
+				name: 'resizeImage:original',
+				value: null,
+				icon: 'original'
+			},
+			{
+				name: 'resizeImage:50',
+				value: '50',
+				icon: 'medium'
+			},
+			{
+				name: 'resizeImage:75',
+				value: '75',
+				icon: 'large'
+			}
+		],
 		toolbar: [
 			'imageStyle:full',
 			'imageStyle:side',
+			'resizeImage',
 			'|',
 			'imageTextAlternative',
 			'|',
