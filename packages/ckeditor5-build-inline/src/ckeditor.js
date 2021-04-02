@@ -105,10 +105,21 @@ InlineEditor.defaultConfig = {
 				icon: 'large'
 			}
 		],
+		styles:[
+			'full',
+			'alignLeft',
+			'alignCenter',
+			'alignRight'
+		],
 		toolbar: [
 			'imageStyle:full',
-			'imageStyle:side',
-			'resizeImage',
+			'imageStyle:alignLeft',
+			'imageStyle:alignCenter',
+			'imageStyle:alignRight',
+			'|',
+			'resizeImage:original',
+			'resizeImage:50',
+			'resizeImage:75',
 			'|',
 			'imageTextAlternative',
 			'|',
