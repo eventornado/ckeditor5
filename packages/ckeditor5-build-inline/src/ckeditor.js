@@ -95,6 +95,11 @@ InlineEditor.defaultConfig = {
 				icon: 'original'
 			},
 			{
+				name: 'resizeImage:25',
+				value: '25',
+				icon: 'small'
+			},
+			{
 				name: 'resizeImage:50',
 				value: '50',
 				icon: 'medium'
@@ -118,6 +123,7 @@ InlineEditor.defaultConfig = {
 			'imageStyle:alignRight',
 			'|',
 			'resizeImage:original',
+			'resizeImage:25',
 			'resizeImage:50',
 			'resizeImage:75',
 			'|',
