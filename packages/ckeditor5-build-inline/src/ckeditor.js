@@ -80,7 +80,7 @@ InlineEditor.defaultConfig = {
 			'outdent',
 			'indent',
 			'|',
-			'uploadImage',
+			'imageUpload',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
