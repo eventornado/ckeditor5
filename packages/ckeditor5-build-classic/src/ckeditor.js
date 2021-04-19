@@ -17,7 +17,6 @@ import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
@@ -32,6 +31,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+import ImageResize from "@ckeditor/ckeditor5-image/src/imageresize";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -119,7 +119,6 @@ ClassicEditor.defaultConfig = {
 			'alignRight'
 		],
 		toolbar: [
-			'imageStyle:full',
 			'imageStyle:alignLeft',
 			'imageStyle:alignCenter',
 			'imageStyle:alignRight',
